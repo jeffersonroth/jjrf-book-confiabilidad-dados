@@ -10,6 +10,7 @@
   <p align="center">
     Libro sobre ingeniería, calidad y confiabilidad de datos
     <br />
+    <br />
     <a href="https://github.com/jeffersonroth/jjrf-book-confiabilidad-dados">Preview</a>
   </p>
 </p>
