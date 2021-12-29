@@ -4,9 +4,7 @@
 
 **Fault Tolerant Systems**:
 * General Reliability Development Hazard logs (FRACAS) [Redundancia]
-* Spare parts stocking [Redundancia]
-* Availability control [Redundancia]
-* Corrective actions [Recuperación de errores]
+* High Availability [https://www.controlglobal.com/assets/14WPpdf/140324-ISA-ControlSystemsHighAvailability.pdf]
 * Technical documentation
 * Safety cases
 * Antifragile

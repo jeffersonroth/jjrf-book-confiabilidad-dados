@@ -134,7 +134,7 @@ Aquí citaré dos estrategias para la recuperación de errores: recuperación **
 
 La recuperación hacia atrás se basa en restaurar el sistema a un estado seguro previo a aquél en el que se produjo el error, para luego ejecutar una sección alternativa de la tarea. Ésta tendrá la misma funcionalidad que la sección que produjo el defecto, pero utilizando un algoritmo distinto. Se espera que esta alternativa no produzca el mismo defecto que la versión anterior, así que dependerá del conocimiento del diseñador sobre los posibles modos de fallo de este componente.
 
-El diseñador debe tener claro los niveles de degradación de un servicio, teniendo en cuenta los servicios y procesos que dependen de éste.
+El diseñador debe tener claro los niveles de degradación de un servicio, teniendo en cuenta los servicios y procesos que dependen de éste. La recuperación de errores hace parte de los procesos de acción correctiva y acciones preventivas (CAPA - Corrective Action and Preventive Action Process), el cual se trabajará en dos momentos: en ese mismo capitulo de tolerancia a fallos cuando se trabajen las acciones correctivas, y en el próximo capitulo, prevención de fallos, cuando se aborde el tema de acciones preventivas.
 
 ##### 4. Tratamiento de los fallos y servicio continuado
 > Un error es una manifestación de un defecto, y aunque la fase de recuperación del error puede haber llevado el sistema a un estado libre de error, el error se puede volver a producir. Por lo tanto, la fase final de la tolerancia de fallos es erradicar el fallo del sistema, de forma que se pueda continuar con el servicio normal.
@@ -173,10 +173,34 @@ Links:
 
 #### Spare Parts Stocking Strategy
 > Con suerte siempre existirán disponibles fuentes de datos limpias, con complejas transformaciones y limpiezas, que ahoran tiempo y procesamiento, y que pueden ser usadas en multiples etapas de multiples procesos, sin embargo las mismas pueden temporalmente estar no disponibles o fallar. Una vez identificados tales fuentes, y constatado que son críticas a un sistema o proceso, es prudente tener tareas mínimas de limpieza y transformaciones que trabajen sobre los datos crudos o fuentes de la fuente, que quizas no resultará en datos finales con los mismos niveles de detalles, pero que serán lo suficiente buenos.
+
 Tales tareas no son diseñadas para hacer parte del flujo normal de los procesos, pero son "piezas de recambio", disponibles para cuando los tiempos de mantenimiento son demasadio largos. El empleo de dichas tareas deben ser por el mínimo de tiempo posible, mientras el equipo tiene tiempo de resolver los fallos en la tarea original, o diseñar su reemplazo.
 
 Links:
 * ReliabilityWeb [https://reliabilityweb.com/articles/entry/how_to_develop_a_spare_parts_stocking_strategy]
+
+#### Availability Controls
+> Fallos de disaponibilidad pueden ocurrir por un sin numero de razones (desde hardware hasta bugs), y algunos sistemas o procesos tienen suficiente relevancia para que controles de disponibilidad (availability controls) sean implementados, para asegurar que determinados servicios o data sigan disponibles cuando ocurra dichos fallos.
+
+Los controles de disponibilidad van desde el uso de backups periodicos de la data, snaps, timetravel, procesos redundantes, sistemas de respaldo en servidores locales o cloud, etc.
+
+Links:
+* WhiteHatSec [https://www.whitehatsec.com/glossary/content/availability-controls]
+* Law Insider [https://www.lawinsider.com/clause/availability-control]
+* Control Global [https://www.controlglobal.com/assets/14WPpdf/140324-ISA-ControlSystemsHighAvailability.pdf]
+
+#### Acciones Correctivas
+> Parte del CAPA (Corrective Action and Preventive Action Process), las acciones correctivas (CAP - Corrective Action Process) consisten en la detección de fallos, la determinación de sus causas raices, las acciones de corrección, y la toma de medidas de prevención para que el mismo fallo vuelva a ocurrir por los mismos motivos. La definición completa se encuentra en la ISO 9001.
+
+Diversas herramientas y tecnicas son utilizadas en diversas industrias para su aplicación, dentre ellas, PDCA (Plan, Do, Check, Act), DMAIC (Define. Measure, Analyse, Improve, Control), 8D, etc. De manera general cualquier herramienta, tecnica o metodologia, es sumarizada en la ISO 9001, en siete "pasos":
+
+1. Definir el problema. Consiste en definir que el problema sea real, identificar Quien, Qué, Cuando, Dónde y Por qué. En el mundo de la ingeniería de datos, ese paso debe ser, en lo posíble, automático, y el fallo debe ser detectado desde sensores.
+2. Definir el escopo. Consiste en mensurar el problema a se resolver, conociendo su frecuencia, a que procesos o tareas, y stakeholders afecta. Para los procesos de data, muchos de los detalles de escopo ya deberían ser información conocida, desde el diseño de los procesos y tareas, ya la frecuencia puede ser levantada desde los procesos de observability y FRACAS.
+3. Acciones de confinamiento o contención. Son medidas puntuales y adoptadas por el mínimo de tiempo posible, mientras se trabaja en la solución definitiva del fallo. De antemano, tales medidas ya deberían estar diseñadas, para cada tarea o sub-tarea. La selección de medidas debería estar automatizada, de no serlo, se deben implementar de inmediato.
+4. Identificación de causas raíz. Diagnosis clara, precisa y completa del fallo. Su documentación hace parte del FRACAS.
+5. Planeación de acciones correctivas. Consiste en la planeación de acciones de corrección basadas especificamente en la causa raíz.
+6. Implementación de acciones correctivas. Consiste en la implementación final de las acciones correctivas en el proceso, que deben automaticamente estar disponibles cuando fallos similares se presenten.
+7. Acompañamento de los resultados (Follow up). Documentación, comunicación, FRACAS completos.
 
 ### Prevención de Fallos: Eliminación
 La segunda fase de prevención de fallos es la eliminación de fallos. Consiste normalmente en procedimientos para encontrar y eliminar las causas de los errores. Aunque se pueden utilizar técnicas como los revisores de código (IDEs, linter) y el debugging en local, ni siempre se llevan a cabo las revisiones por pares y pruebas exhaustivas con las distintas combinaciones de estados de entrada y entorno. 
