@@ -3,8 +3,6 @@
 ## Topics
 
 **Fault Tolerant Systems**:
-* Reliability block diagrams (RBD) [Redundancia]
-* Failure Reporting, Analysis, and Corrective Action System (FRACAS) [Redundancia]
 * General Reliability Development Hazard logs (FRACAS) [Redundancia]
 * Spare parts stocking [Redundancia]
 * Availability control [Redundancia]
@@ -132,3 +130,12 @@
 * Human Interaction
 * Human Errors
 * Latent Human Error
+
+**DataOps**:
+
+**Business Process Management**:
+* BPM
+* BPI
+* BPE
+* BPA
+* BPR

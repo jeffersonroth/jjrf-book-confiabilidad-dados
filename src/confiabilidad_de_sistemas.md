@@ -148,6 +148,12 @@ Al analizarse el diagrama, se indican componentes que fallaron y los que no fall
 
 Cada RBD debe incluir afirmaciones o sentencias listando todas las relaciones entre los componentes, es decir que condiciones llevarón a tomar un componente u otro en la ejecución del proceso.
 
+Links:
+* Université Angers [https://moodle.univ-angers.fr/pluginfile.php/2071725/mod_resource/content/1/Reliability%20Engineering%20-%20ISMP%20-%20Chap%203%20-%20RBD.pdf]
+* Wikipedia [https://en.wikipedia.org/wiki/Reliability_block_diagram]
+* HPReliability [https://hpreliability.com/understanding-reliability-block-diagrams/]
+* Sydney Water [https://www.sydneywater.com.au/web/groups/publicwebcontent/documents/document/zgrf/mdq2/~edisp/dd_046415.pdf]
+
 #### Failure Reporting, Analysis, and Corrective Action System (FRACAS)
 > FRACAS es un sistema o proceso definido para el reporte, clasificación y analisis de fallos, bien como la planeación de acciones correctivas de dichos fallos. Es parte del proceso guardar el historial de los analisis y acciones tomadas.
 
@@ -163,12 +169,14 @@ La implementación de proceso es cíclica y se da por (FRACAS Kaizen Loop adapta
 Links:
 * Wikipedia [https://en.wikipedia.org/wiki/Failure_reporting,_analysis,_and_corrective_action_system]
 * Reliability Web [https://reliabilityweb.com/articles/entry/whats_the_fracas]
+* IEEE Best Practices [https://ieeexplore.ieee.org/abstract/document/1285523]
+
+#### Spare Parts Stocking Strategy
+> Con suerte siempre existirán disponibles fuentes de datos limpias, con complejas transformaciones y limpiezas, que ahoran tiempo y procesamiento, y que pueden ser usadas en multiples etapas de multiples procesos, sin embargo las mismas pueden temporalmente estar no disponibles o fallar. Una vez identificados tales fuentes, y constatado que son críticas a un sistema o proceso, es prudente tener tareas mínimas de limpieza y transformaciones que trabajen sobre los datos crudos o fuentes de la fuente, que quizas no resultará en datos finales con los mismos niveles de detalles, pero que serán lo suficiente buenos.
+Tales tareas no son diseñadas para hacer parte del flujo normal de los procesos, pero son "piezas de recambio", disponibles para cuando los tiempos de mantenimiento son demasadio largos. El empleo de dichas tareas deben ser por el mínimo de tiempo posible, mientras el equipo tiene tiempo de resolver los fallos en la tarea original, o diseñar su reemplazo.
 
 Links:
-* Université Angers [https://moodle.univ-angers.fr/pluginfile.php/2071725/mod_resource/content/1/Reliability%20Engineering%20-%20ISMP%20-%20Chap%203%20-%20RBD.pdf]
-* Wikipedia [https://en.wikipedia.org/wiki/Reliability_block_diagram]
-* HPReliability [https://hpreliability.com/understanding-reliability-block-diagrams/]
-* Sydney Water [https://www.sydneywater.com.au/web/groups/publicwebcontent/documents/document/zgrf/mdq2/~edisp/dd_046415.pdf]
+* ReliabilityWeb [https://reliabilityweb.com/articles/entry/how_to_develop_a_spare_parts_stocking_strategy]
 
 ### Prevención de Fallos: Eliminación
 La segunda fase de prevención de fallos es la eliminación de fallos. Consiste normalmente en procedimientos para encontrar y eliminar las causas de los errores. Aunque se pueden utilizar técnicas como los revisores de código (IDEs, linter) y el debugging en local, ni siempre se llevan a cabo las revisiones por pares y pruebas exhaustivas con las distintas combinaciones de estados de entrada y entorno. 
