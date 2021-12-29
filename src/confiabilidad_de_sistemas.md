@@ -153,7 +153,12 @@ Cada RBD debe incluir afirmaciones o sentencias listando todas las relaciones en
 
 Llevar a cabo dicho proceso supone automatizar el analisis de los logs de los procesos de data (logs), commits, pull requests y tickets.
 
-
+La implementación de proceso es cíclica y se da por (FRACAS Kaizen Loop adaptado):
+* **Failure Mode Analysis**: analysis de los modos de fallos.
+* **Failure Codes Creation**: creación de códigos de fallos, o la metodología para clasificarlos.
+* **Work Order History Analysis**: analisis del historial de tickets enviados al equipo de data.
+* **Root Cause Analysis**: analisis de las causas raices.
+* **Strategy Adjustment**: ajuste de estratégia.
 
 Links:
 * Wikipedia [https://en.wikipedia.org/wiki/Failure_reporting,_analysis,_and_corrective_action_system]
