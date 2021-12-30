@@ -7,7 +7,6 @@
 * High Availability [https://www.controlglobal.com/assets/14WPpdf/140324-ISA-ControlSystemsHighAvailability.pdf]
 * Technical documentation
 * Safety cases
-* Antifragile
 * Bulkhead
 * Change Control
 * Cold Standby

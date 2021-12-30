@@ -202,6 +202,21 @@ Diversas herramientas y tecnicas son utilizadas en diversas industrias para su a
 6. Implementación de acciones correctivas. Consiste en la implementación final de las acciones correctivas en el proceso, que deben automaticamente estar disponibles cuando fallos similares se presenten.
 7. Acompañamento de los resultados (Follow up). Documentación, comunicación, FRACAS completos.
 
+#### Antifragilidad
+> Inspirado en el libro *Antifragile: Things That Gain from Disorder* de Nissim Nicholas Taleb, la antifragilidad difere de los conceptos de resiliencia o robustez, dónde los sistemas buscan mantener su nivel de confiabilidad, sino que desde su diseño, los sistemas aumentar su confiabilidad con respecto a los inputs del sistema.
+
+La antifragilidad propone un cambio de diseño de los sistemas (en el escopo de este libro, procesos), los cuales comunmente son diseñados para ser fragiles, en el sentido de que si el mismo opera fuera de sus requerimientos, lo mismo fallará. La antifragilidad propone lo contrário, diseñar sistemas que se vuelven mejores cuando expuestos a cargas fuera de los requerimientos. En ese sentido, los sistemas no son diseñados para responder solamente a lo esperado o anticipado, sino que interactuan con su entorno en tiempo real y se adaptan a ello.
+
+* Self-healing
+* Real time sensoring, monitoring
+* Live FRACAS
+* System Health Management
+* Automatic Repair
+
+Links:
+* Nasa [https://ntrs.nasa.gov/api/citations/20140010075/downloads/20140010075.pdf]
+* Refuses [https://refuses.github.io/preprints/antifragile.pdf]
+
 ### Prevención de Fallos: Eliminación
 La segunda fase de prevención de fallos es la eliminación de fallos. Consiste normalmente en procedimientos para encontrar y eliminar las causas de los errores. Aunque se pueden utilizar técnicas como los revisores de código (IDEs, linter) y el debugging en local, ni siempre se llevan a cabo las revisiones por pares y pruebas exhaustivas con las distintas combinaciones de estados de entrada y entorno. 
 
