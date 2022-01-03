@@ -1,10 +1,10 @@
 # Confiabilidad de Sistemas
 > La confiabilidad de un sistema es la propiedad del sistema que permite calificar, justificadamente, como fiable al servicio que proporciona.
 
-## [Impedimentos](./impedimientos.md)
+## [Impedimentos](./impediments.md)
 
-## [Deficiencias](./deficiencias.md)
+## [Deficiencias](./deficiencies.md)
 
-## [Atributos](./atributos.md)
+## [Atributos](./attributes.md)
 
-## [Mecanismos](./mecanismos.md)
+## [Mecanismos](./mechanisms.md)

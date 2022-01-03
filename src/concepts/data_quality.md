@@ -24,7 +24,7 @@
 ### DCAM
 ### Modelo MAMD
 
-## Calidad de repositorio de datos
+## Modelos de calidad de datos
 ### Modelo de calidad de datos
 ### Medidas de calidad de datos
 ### Proceso de evaluación
