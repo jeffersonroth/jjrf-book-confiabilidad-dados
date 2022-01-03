@@ -96,16 +96,16 @@ Existen diferentes niveles de tolerancia a fallos:
 * **Fallo seguro**: los fallos detectados son suficientes para detectar que el proceso no debe ocurrir, un operador de cortocircuito cancela la ejecución de los subsiguientes tasks, los responsables son notificados, y caso no exista un proceso automático para lidiar con el problema, el equipo de data puede tomar acciones como volver a ejecutar los procesos que generan los inputs necesarios, o escalar el caso.
 
 El diseño de los procesos tolerantes a fallos supone:
-* Los algoritmos de los tasks se han diseñado correctamente.
+* Los algoritmos de las tareas se han diseñado correctamente.
 * Se conocen todos los posibles modos de fallos de los componentes.
 * Se han tenido en cuenta todas las posibles interacciones entre el proceso y su entorno.
 
 #### Redundancia
-> Todas las técnicas utilizadas para conseguir tolerancia a fallos se basan en añadir elementos externos al sistema para que detecte y se recupere de fallos. Estos elementos son redundantes en el sentido de que no son necesarios para el normal funcionamiento del sistema, a esto llamamos **redundancia protectora**. El objetivo de la tolerancia es minimizar la redundancia, maximizando la fiabilidad, siempre bajo las restricciones de complejidad y tamaño del sistema. Se debe tener cuidado al diseñar los sistemas tolerantes a fallos, ya que los componentes incrementan la complejidad y mantenimiento de todo el sistema, lo que puede en sí, conducir a sistemas menos fiables.
+> Todas las técnicas utilizadas para conseguir tolerancia a fallos se basan en añadir elementos externos al sistema para que detecte y se recupere de fallos. Estos elementos son redundantes en el sentido de que no son necesarios para el normal funcionamiento del sistema, a esto llamamos **redundancia protectora**. El objetivo de la tolerancia es minimizar la redundancia, maximizando la fiabilidad, siempre bajo las restricciones de complejidad y tamaño del sistema. **Se debe tener cuidado al diseñar los sistemas tolerantes a fallos, ya que los componentes incrementan la complejidad y mantenimiento de todo el sistema, lo que puede en sí, conducir a sistemas menos fiables**.
 
 Clasificamos la redundancia en los sistemas en estáticas y dinámicas. La **redundancia estática**, o enmascaramiento, consiste en que los componentes redundantes son utilizados para ocultar los efectos de los fallos. La **redundancia dinámica** es la redundancia aportada dentro de un componente que hace que el mismo indique, implícita o explícitamente, que la salida es errónea; la recuperación debe ser proporcionada por otro componente. Esta técnica de tolerancia a fallos tiene cuatro fases:
 1. **Detección de errores**: no se utilizará ningún esquema de tolerancia a fallos hasta que se haya detectado un error.
-2. **Confinamiento y valoración de daños**: cuando se detecte un error, debe estimarse la extensión del sistema que ha sido corrompida (diagnóstico de error).
+2. **Confinamiento y valoración de daños**: cuando se detecte un error, debe estimarse la extensión del sistema que ha sido corrompida (diagnóstico de error) y su escopo.
 3. **Recuperación del error**: este es uno de los aspectos más importantes de la tolerancia a fallos. Las técnicas de recuperación de errores deberían dirigir al sistema corrupto a un estado a partir del cual pueda continuar con su normal funcionamiento (quizás con una degradación funcional).
 4. **Tratamiento del fallo y continuación del servicio**: un error es un síntoma de un fallo; aunque el daño pudiera haber sido reparado, el fallo continúa existiendo, y por lo tanto el error puede volver a darse a menos que se realice algún tipo de mantenimiento.
 
@@ -144,15 +144,15 @@ El diseñador debe tener claro los niveles de degradación de un servicio, tenie
 
 Un RBD es representado en una serie de blocos conectados (en série, en paralelo, o su combinanción), indicando componentes redundantes, indicando el tipo de redundancia y su respectivo failure rate.
 
-Al analizarse el diagrama, se indican componentes que fallaron y los que no fallaron. Si es posible encontrar una ruta o camino entre el inicio y el fin de proceso con componentes que no fallarón, se puede suponer que el proceso se puede completar.
+Al analizarse el diagrama, se indican componentes que fallaron y los que no fallaron. Si es posible encontrar una ruta o camino entre el inicio y el fin de proceso con componentes que no fallaron, se puede suponer que el proceso se puede completar.
 
 Cada RBD debe incluir afirmaciones o sentencias listando todas las relaciones entre los componentes, es decir que condiciones llevarón a tomar un componente u otro en la ejecución del proceso.
 
 Links:
-* Université Angers [https://moodle.univ-angers.fr/pluginfile.php/2071725/mod_resource/content/1/Reliability%20Engineering%20-%20ISMP%20-%20Chap%203%20-%20RBD.pdf]
-* Wikipedia [https://en.wikipedia.org/wiki/Reliability_block_diagram]
-* HPReliability [https://hpreliability.com/understanding-reliability-block-diagrams/]
-* Sydney Water [https://www.sydneywater.com.au/web/groups/publicwebcontent/documents/document/zgrf/mdq2/~edisp/dd_046415.pdf]
+* [Université Angers](https://moodle.univ-angers.fr/pluginfile.php/2071725/mod_resource/content/1/Reliability%20Engineering%20-%20ISMP%20-%20Chap%203%20-%20RBD.pdf)
+* [Wikipedia](https://en.wikipedia.org/wiki/Reliability_block_diagram)
+* [HPReliability](https://hpreliability.com/understanding-reliability-block-diagrams/)
+* [Sydney Water](https://www.sydneywater.com.au/web/groups/publicwebcontent/documents/document/zgrf/mdq2/~edisp/dd_046415.pdf)
 
 #### Failure Reporting, Analysis, and Corrective Action System (FRACAS)
 > FRACAS es un sistema o proceso definido para el reporte, clasificación y analisis de fallos, bien como la planeación de acciones correctivas de dichos fallos. Es parte del proceso guardar el historial de los analisis y acciones tomadas.
@@ -167,9 +167,9 @@ La implementación de proceso es cíclica y se da por (FRACAS Kaizen Loop adapta
 * **Strategy Adjustment**: ajuste de estratégia.
 
 Links:
-* Wikipedia [https://en.wikipedia.org/wiki/Failure_reporting,_analysis,_and_corrective_action_system]
-* Reliability Web [https://reliabilityweb.com/articles/entry/whats_the_fracas]
-* IEEE Best Practices [https://ieeexplore.ieee.org/abstract/document/1285523]
+* [Wikipedia](https://en.wikipedia.org/wiki/Failure_reporting,_analysis,_and_corrective_action_system)
+* [Reliability Web](https://reliabilityweb.com/articles/entry/whats_the_fracas)
+* [IEEE Best Practices](https://ieeexplore.ieee.org/abstract/document/1285523)
 
 #### Spare Parts Stocking Strategy
 > Con suerte siempre existirán disponibles fuentes de datos limpias, con complejas transformaciones y limpiezas, que ahoran tiempo y procesamiento, y que pueden ser usadas en multiples etapas de multiples procesos, sin embargo las mismas pueden temporalmente estar no disponibles o fallar. Una vez identificados tales fuentes, y constatado que son críticas a un sistema o proceso, es prudente tener tareas mínimas de limpieza y transformaciones que trabajen sobre los datos crudos o fuentes de la fuente, que quizas no resultará en datos finales con los mismos niveles de detalles, pero que serán lo suficiente buenos.
@@ -177,7 +177,7 @@ Links:
 Tales tareas no son diseñadas para hacer parte del flujo normal de los procesos, pero son "piezas de recambio", disponibles para cuando los tiempos de mantenimiento son demasadio largos. El empleo de dichas tareas deben ser por el mínimo de tiempo posible, mientras el equipo tiene tiempo de resolver los fallos en la tarea original, o diseñar su reemplazo.
 
 Links:
-* ReliabilityWeb [https://reliabilityweb.com/articles/entry/how_to_develop_a_spare_parts_stocking_strategy]
+* [ReliabilityWeb](https://reliabilityweb.com/articles/entry/how_to_develop_a_spare_parts_stocking_strategy)
 
 #### Availability Controls
 > Fallos de disaponibilidad pueden ocurrir por un sin numero de razones (desde hardware hasta bugs), y algunos sistemas o procesos tienen suficiente relevancia para que controles de disponibilidad (availability controls) sean implementados, para asegurar que determinados servicios o data sigan disponibles cuando ocurra dichos fallos.
@@ -185,9 +185,9 @@ Links:
 Los controles de disponibilidad van desde el uso de backups periodicos de la data, snaps, timetravel, procesos redundantes, sistemas de respaldo en servidores locales o cloud, etc.
 
 Links:
-* WhiteHatSec [https://www.whitehatsec.com/glossary/content/availability-controls]
-* Law Insider [https://www.lawinsider.com/clause/availability-control]
-* Control Global [https://www.controlglobal.com/assets/14WPpdf/140324-ISA-ControlSystemsHighAvailability.pdf]
+* [WhiteHatSec](https://www.whitehatsec.com/glossary/content/availability-controls)
+* [Law Insider](https://www.lawinsider.com/clause/availability-control)
+* [Control Global](https://www.controlglobal.com/assets/14WPpdf/140324-ISA-ControlSystemsHighAvailability.pdf)
 
 #### Acciones Correctivas
 > Parte del CAPA (Corrective Action and Preventive Action Process), las acciones correctivas (CAP - Corrective Action Process) consisten en la detección de fallos, la determinación de sus causas raices, las acciones de corrección, y la toma de medidas de prevención para que el mismo fallo vuelva a ocurrir por los mismos motivos. La definición completa se encuentra en la ISO 9001.
@@ -214,8 +214,16 @@ La antifragilidad propone un cambio de diseño de los sistemas (en el escopo de 
 * Automatic Repair
 
 Links:
-* Nasa [https://ntrs.nasa.gov/api/citations/20140010075/downloads/20140010075.pdf]
-* Refuses [https://refuses.github.io/preprints/antifragile.pdf]
+* [NASA](https://ntrs.nasa.gov/api/citations/20140010075/downloads/20140010075.pdf)
+* [Refuses](https://refuses.github.io/preprints/antifragile.pdf)
+
+#### Bulkhead Pattern
+> En el mundo nautico encontramos los mamparos, placas de madera que encontramos en los barcos, que buscan que el barco no naufrague cuando se tiene comprometida una porción del casco. Para los sistemas el Bulhead Pattern adapta exactamente esa idea, de que un fallo en una porción del sistema no comprometa el sistema en su totalidad.
+
+Este design pattern es aplicado comunmente en el desarrollo de software, consiste en no sobrecargar un servicio con más llamadas de las que puede soportar en un determinado tiempo, un ejemplo de eso es Hystrix, de Netflix.
+
+Links:
+* [Netflix](https://github.com/Netflix/Hystrix/wiki/How-it-Works)
 
 ### Prevención de Fallos: Eliminación
 La segunda fase de prevención de fallos es la eliminación de fallos. Consiste normalmente en procedimientos para encontrar y eliminar las causas de los errores. Aunque se pueden utilizar técnicas como los revisores de código (IDEs, linter) y el debugging en local, ni siempre se llevan a cabo las revisiones por pares y pruebas exhaustivas con las distintas combinaciones de estados de entrada y entorno. 
