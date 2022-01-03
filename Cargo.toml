@@ -36,5 +36,5 @@ serve = ["futures-util", "tokio", "warp"]
 search = ["elasticlunr-rs", "ammonia"]
 
 [[bin]]
-name = "main"
-path = "src/main.rs"
+doc = false
+name = "mdbook"
