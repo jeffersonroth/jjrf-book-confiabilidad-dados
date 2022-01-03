@@ -17,7 +17,6 @@ cd target/release
 asset="mdbook-$TAG-$host.tar.gz"
 tar czf ../../$asset mdbook
 ;;
-;;
 esac
 cd ../..
 
