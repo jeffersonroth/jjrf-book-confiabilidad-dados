@@ -14,28 +14,10 @@ host=$(rustc -Vv | grep ^host: | sed -e "s/host: //g")
 export CARGO_PROFILE_RELEASE_LTO=true
 cargo build --bin mdbook --release
 cd target/release
-case $1 in
-  ubuntu*)
-    asset="mdbook-$TAG-$host.tar.gz"
-    tar czf ../../$asset mdbook
-    ;;
-  macos*)
-    asset="mdbook-$TAG-$host.tar.gz"
-    # There is a bug with BSD tar on macOS where the first 8MB of the file are
-    # sometimes all NUL bytes. See https://github.com/actions/cache/issues/403
-    # and https://github.com/rust-lang/cargo/issues/8603 for some more
-    # information. An alternative solution here is to install GNU tar, but
-    # flushing the disk cache seems to work, too.
-    sudo /usr/sbin/purge
-    tar czf ../../$asset mdbook
-    ;;
-  windows*)
-    asset="mdbook-$TAG-$host.zip"
-    7z a ../../$asset mdbook.exe
-    ;;
-  *)
-    echo "OS should be first parameter, was: $1"
-    ;;
+asset="mdbook-$TAG-$host.tar.gz"
+tar czf ../../$asset mdbook
+;;
+;;
 esac
 cd ../..
 
