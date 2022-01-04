@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tolerancia de Fallos</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../preface/preface.html"><strong aria-hidden="true">1.</strong> Prefacio</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../preface/author.html"><strong aria-hidden="true">1.1.</strong> Autor</a></li><li class="chapter-item expanded "><a href="../preface/objectives.html"><strong aria-hidden="true">1.2.</strong> Objetivos</a></li><li class="chapter-item expanded "><a href="../preface/structure_contents.html"><strong aria-hidden="true">1.3.</strong> Estructura y Contenido</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/concepts.html"><strong aria-hidden="true">2.</strong> Conceptos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/systems_info.html"><strong aria-hidden="true">2.1.</strong> Introducción a Sistemas</a></li><li class="chapter-item expanded "><a href="../concepts/systems_reliability.html"><strong aria-hidden="true">2.2.</strong> Confiabilidad de Sistemas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/impediments.html"><strong aria-hidden="true">2.2.1.</strong> Impedimientos: Fallos, Errores y Defectos</a></li><li class="chapter-item expanded "><a href="../concepts/deficiencies.html"><strong aria-hidden="true">2.2.2.</strong> Deficiencias</a></li><li class="chapter-item expanded "><a href="../concepts/attributes.html"><strong aria-hidden="true">2.2.3.</strong> Atributos</a></li><li class="chapter-item expanded "><a href="../concepts/mechanisms.html"><strong aria-hidden="true">2.2.4.</strong> Mecanismos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/fault_prevention_avoidance.html"><strong aria-hidden="true">2.2.4.1.</strong> Prevención de Fallos: Evitación</a></li><li class="chapter-item expanded "><a href="../concepts/fault_tolerance.html" class="active"><strong aria-hidden="true">2.2.4.2.</strong> Tolerancia de Fallos</a></li><li class="chapter-item expanded "><a href="../concepts/fault_prevention_elimination.html"><strong aria-hidden="true">2.2.4.3.</strong> Prevención de Fallos: Eliminación</a></li><li class="chapter-item expanded "><a href="../concepts/fault_prediction.html"><strong aria-hidden="true">2.2.4.4.</strong> Predicción de Fallos</a></li><li class="chapter-item expanded "><a href="../concepts/reliability_tools.html"><strong aria-hidden="true">2.2.4.5.</strong> Herramientas</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../concepts/data_quality.html"><strong aria-hidden="true">2.3.</strong> Calidad de Datos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/data_quality_intro.html"><strong aria-hidden="true">2.3.1.</strong> Fundamentos de la Calidad de Datos</a></li><li class="chapter-item expanded "><a href="../concepts/master_data.html"><strong aria-hidden="true">2.3.2.</strong> Datos Maestros</a></li><li class="chapter-item expanded "><a href="../concepts/data_management_processes.html"><strong aria-hidden="true">2.3.3.</strong> Calidad de los Procesos de Datos</a></li><li class="chapter-item expanded "><a href="../concepts/data_quality_models.html"><strong aria-hidden="true">2.3.4.</strong> Modelos de Calidad de Datos</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.4.</strong> Orquestación, DAGs y Pipelines</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Casos de Uso</div></li><li class="chapter-item expanded "><a href="../backlog.html"><strong aria-hidden="true">4.</strong> Backlog</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="tolerancia-de-fallos"><a class="header" href="#tolerancia-de-fallos">Tolerancia de Fallos</a></h1>
+<blockquote>
+<p>Debido a las limitaciones en las prevenciones de fallos, una vez que la data y los procesos cambian con frecuencia, es necesario recurrir a la tolerancia de fallos.</p>
+</blockquote>
+<p>Existen diferentes niveles de tolerancia a fallos:</p>
+<ul>
+<li><strong>Tolerancia total</strong>: no hay manejo de condiciones adversas o no deseadas, el proceso no se adapta a las validaciones y variables de entorno u otras informaciones externas para la ejecución de los tasks.</li>
+<li><strong>Degradación controlada</strong> (o caída suave): notificaciones serán disparadas en la presencia de fallos, y siendo el suficiente importantes para interrumpir el flujo de tareas (thresholds, inexistencia o indisponibilidad de la data), los operadores de rama seleccionarán los tasks subsiguientes.</li>
+<li><strong>Fallo seguro</strong>: los fallos detectados son suficientes para detectar que el proceso no debe ocurrir, un operador de cortocircuito cancela la ejecución de los subsiguientes tasks, los responsables son notificados, y caso no exista un proceso automático para lidiar con el problema, el equipo de data puede tomar acciones como volver a ejecutar los procesos que generan los inputs necesarios, o escalar el caso.</li>
+</ul>
+<p>El diseño de los procesos tolerantes a fallos supone:</p>
+<ul>
+<li>Los algoritmos de las tareas se han diseñado correctamente.</li>
+<li>Se conocen todos los posibles modos de fallos de los componentes.</li>
+<li>Se han tenido en cuenta todas las posibles interacciones entre el proceso y su entorno.</li>
+</ul>
+<h2 id="redundancia"><a class="header" href="#redundancia">Redundancia</a></h2>
+<blockquote>
+<p>Todas las técnicas utilizadas para conseguir tolerancia a fallos se basan en añadir elementos externos al sistema para que detecte y se recupere de fallos. Estos elementos son redundantes en el sentido de que no son necesarios para el normal funcionamiento del sistema, a esto llamamos <strong>redundancia protectora</strong>. El objetivo de la tolerancia es minimizar la redundancia, maximizando la fiabilidad, siempre bajo las restricciones de complejidad y tamaño del sistema. <strong>Se debe tener cuidado al diseñar los sistemas tolerantes a fallos, ya que los componentes incrementan la complejidad y mantenimiento de todo el sistema, lo que puede en sí, conducir a sistemas menos fiables</strong>.</p>
+</blockquote>
+<p>Clasificamos la redundancia en los sistemas en estáticas y dinámicas. La <strong>redundancia estática</strong>, o enmascaramiento, consiste en que los componentes redundantes son utilizados para ocultar los efectos de los fallos. La <strong>redundancia dinámica</strong> es la redundancia aportada dentro de un componente que hace que el mismo indique, implícita o explícitamente, que la salida es errónea; la recuperación debe ser proporcionada por otro componente. Esta técnica de tolerancia a fallos tiene cuatro fases:</p>
+<ol>
+<li><strong>Detección de errores</strong>: no se utilizará ningún esquema de tolerancia a fallos hasta que se haya detectado un error.</li>
+<li><strong>Confinamiento y valoración de daños</strong>: cuando se detecte un error, debe estimarse la extensión del sistema que ha sido corrompida (diagnóstico de error) y su escopo.</li>
+<li><strong>Recuperación del error</strong>: este es uno de los aspectos más importantes de la tolerancia a fallos. Las técnicas de recuperación de errores deberían dirigir al sistema corrupto a un estado a partir del cual pueda continuar con su normal funcionamiento (quizás con una degradación funcional).</li>
+<li><strong>Tratamiento del fallo y continuación del servicio</strong>: un error es un síntoma de un fallo; aunque el daño pudiera haber sido reparado, el fallo continúa existiendo, y por lo tanto el error puede volver a darse a menos que se realice algún tipo de mantenimiento.</li>
+</ol>
+<h3 id="1-detección-de-errores"><a class="header" href="#1-detección-de-errores">1. Detección de errores</a></h3>
+<blockquote>
+<p>La efectividad de un sistema tolerante a fallos depende de la <strong>efectividad de detección de errores</strong>.</p>
+</blockquote>
+<p>La detección de errores se clasifican en:</p>
+<ul>
+<li><strong>Detecciones en el entorno</strong>. Los errores se detectan en el entorno en el cual se ejecutan el programa. Son manejados por las excepciones (exceptions).</li>
+<li><strong>Detección en la aplicación</strong>. Los errores se detectan en la misma aplicación.
+<ul>
+<li><strong>Comprobaciones inversas</strong>. Aplicadas en componentes de relación isomórfica (uno a uno) entre la entrada y la salida. En este método, se toma la salida y se calcula la entrada, lo cual es comparado con el valor de entrada original. Para casos de números reales, es necesario adoptar técnicas de comparación inexactas.</li>
+<li><strong>Comprobación de racionalidad</strong>. Se basan en el conocimiento del diseño y de la construcción del sistema. Comprueban que el estado de los datos o el valor de un objeto es razonable basándose en su supuesto uso.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-confinamiento-y-valoración-de-los-daños"><a class="header" href="#2-confinamiento-y-valoración-de-los-daños">2. Confinamiento y valoración de los daños</a></h3>
+<blockquote>
+<p>Siempre existirá una magnitud de tiempo, entre la ocurrencia de un defecto y la detección del error, siendo por lo tanto importante la valoración de cualquier daño que se haya podido producir en este intervalo de tiempo.</p>
+</blockquote>
+<p>Aunque el tipo de error detectado podrá dar ideas sobre el daño a la rutina de tratamiento del error, podrían haber sido diseminadas informaciones erróneas por el sistema y su entorno. Así, la valoración de los daños estará directamente relacionada con las precauciones tomadas por el diseñador de este sistema para el confinamiento del daño (<strong>construcción de cortafuegos</strong>). El confinamiento del daño se refiere a la estructuración del sistema de modo que se minimicen los daños causados por un componente defectuoso.</p>
+<p>Existen dos técnicas principales para estructurar los sistemas de modo que se facilite el confinamiento de daños: <strong>descomposición modular</strong> y <strong>acciones atómicas</strong>. Por descomposición modular entiéndase que los sistemas deben ser descompuestos en componentes, cada uno de los cuales se representa por uno o más módulos. La interacción de los componentes se produce a través de interfaces bien definidas, y los detalles internos de los módulos están ocultos y no son accesibles directamente desde el exterior. Esto hace más difícil que un error en un componente pase indiscriminadamente a otro.</p>
+<p>La descomposición modular proporciona al sistema una estructura estática, ya las acciones atómicas proporcionan al mismo una estructura dinámica. Se dice que una acción es atómica si no existen interacciones entre la actividad y el sistema durante el transcurso de la acción. Estas acciones se utilizan para mover el sistema de un estado consistente a otro, y para restringir el flujo de información entre los componentes.</p>
+<h3 id="3-recuperación-de-errores"><a class="header" href="#3-recuperación-de-errores">3. Recuperación de errores</a></h3>
+<blockquote>
+<p>Una vez detectada la situación de error, y que sus posibles daños hayan sido valorados, se inician los procedimientos de recuperación de errores. Esta fase es probablemente la más importante dentro de las técnicas de tolerancia a fallos, la cual debe transformar un estado erróneo del sistema en otro desde el cual el sistema pueda continuar con su funcionamiento normal, quizás con una cierta degradación en el servicio.</p>
+</blockquote>
+<p>Aquí citaré dos estrategias para la recuperación de errores: recuperación <strong>hacia adelante</strong>, y <strong>hacia atrás</strong>. La recuperación de errores hacia adelante intenta continuar desde el estado erróneo realizando correcciones selectivas en el estado del sistema, que incluye proteger cualquier aspecto del entorno controlado que pudiera ser puesto en riesgo o dañado por el fallo.</p>
+<p>La recuperación hacia atrás se basa en restaurar el sistema a un estado seguro previo a aquél en el que se produjo el error, para luego ejecutar una sección alternativa de la tarea. Ésta tendrá la misma funcionalidad que la sección que produjo el defecto, pero utilizando un algoritmo distinto. Se espera que esta alternativa no produzca el mismo defecto que la versión anterior, así que dependerá del conocimiento del diseñador sobre los posibles modos de fallo de este componente.</p>
+<p>El diseñador debe tener claro los niveles de degradación de un servicio, teniendo en cuenta los servicios y procesos que dependen de éste. La recuperación de errores hace parte de los procesos de acción correctiva y acciones preventivas (CAPA - Corrective Action and Preventive Action Process), el cual se trabajará en dos momentos: en ese mismo capitulo de tolerancia a fallos cuando se trabajen las acciones correctivas, y en el próximo capitulo, prevención de fallos, cuando se aborde el tema de acciones preventivas.</p>
+<h3 id="4-tratamiento-de-los-fallos-y-servicio-continuado"><a class="header" href="#4-tratamiento-de-los-fallos-y-servicio-continuado">4. Tratamiento de los fallos y servicio continuado</a></h3>
+<blockquote>
+<p>Un error es una manifestación de un defecto, y aunque la fase de recuperación del error puede haber llevado el sistema a un estado libre de error, el error se puede volver a producir. Por lo tanto, la fase final de la tolerancia de fallos es erradicar el fallo del sistema, de forma que se pueda continuar con el servicio normal.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../concepts/fault_prevention_avoidance.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../concepts/fault_prevention_elimination.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../concepts/fault_prevention_avoidance.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../concepts/fault_prevention_elimination.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

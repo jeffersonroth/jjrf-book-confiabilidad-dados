@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Herramientas</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../preface/preface.html"><strong aria-hidden="true">1.</strong> Prefacio</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../preface/author.html"><strong aria-hidden="true">1.1.</strong> Autor</a></li><li class="chapter-item expanded "><a href="../preface/objectives.html"><strong aria-hidden="true">1.2.</strong> Objetivos</a></li><li class="chapter-item expanded "><a href="../preface/structure_contents.html"><strong aria-hidden="true">1.3.</strong> Estructura y Contenido</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/concepts.html"><strong aria-hidden="true">2.</strong> Conceptos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/systems_info.html"><strong aria-hidden="true">2.1.</strong> Introducción a Sistemas</a></li><li class="chapter-item expanded "><a href="../concepts/systems_reliability.html"><strong aria-hidden="true">2.2.</strong> Confiabilidad de Sistemas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/impediments.html"><strong aria-hidden="true">2.2.1.</strong> Impedimientos: Fallos, Errores y Defectos</a></li><li class="chapter-item expanded "><a href="../concepts/deficiencies.html"><strong aria-hidden="true">2.2.2.</strong> Deficiencias</a></li><li class="chapter-item expanded "><a href="../concepts/attributes.html"><strong aria-hidden="true">2.2.3.</strong> Atributos</a></li><li class="chapter-item expanded "><a href="../concepts/mechanisms.html"><strong aria-hidden="true">2.2.4.</strong> Mecanismos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/fault_prevention_avoidance.html"><strong aria-hidden="true">2.2.4.1.</strong> Prevención de Fallos: Evitación</a></li><li class="chapter-item expanded "><a href="../concepts/fault_tolerance.html"><strong aria-hidden="true">2.2.4.2.</strong> Tolerancia de Fallos</a></li><li class="chapter-item expanded "><a href="../concepts/fault_prevention_elimination.html"><strong aria-hidden="true">2.2.4.3.</strong> Prevención de Fallos: Eliminación</a></li><li class="chapter-item expanded "><a href="../concepts/fault_prediction.html"><strong aria-hidden="true">2.2.4.4.</strong> Predicción de Fallos</a></li><li class="chapter-item expanded "><a href="../concepts/reliability_tools.html" class="active"><strong aria-hidden="true">2.2.4.5.</strong> Herramientas</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../concepts/data_quality.html"><strong aria-hidden="true">2.3.</strong> Calidad de Datos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/data_quality_intro.html"><strong aria-hidden="true">2.3.1.</strong> Fundamentos de la Calidad de Datos</a></li><li class="chapter-item expanded "><a href="../concepts/master_data.html"><strong aria-hidden="true">2.3.2.</strong> Datos Maestros</a></li><li class="chapter-item expanded "><a href="../concepts/data_management_processes.html"><strong aria-hidden="true">2.3.3.</strong> Calidad de los Procesos de Datos</a></li><li class="chapter-item expanded "><a href="../concepts/data_quality_models.html"><strong aria-hidden="true">2.3.4.</strong> Modelos de Calidad de Datos</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.4.</strong> Orquestación, DAGs y Pipelines</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Casos de Uso</div></li><li class="chapter-item expanded "><a href="../backlog.html"><strong aria-hidden="true">4.</strong> Backlog</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="herramientas-de-confiabilidad"><a class="header" href="#herramientas-de-confiabilidad">Herramientas de Confiabilidad</a></h1>
+<h2 id="diagramas-de-blocos-de-confiabilidad"><a class="header" href="#diagramas-de-blocos-de-confiabilidad">Diagramas de blocos de confiabilidad</a></h2>
+<blockquote>
+<p>Los diagramas de blocos de confiabilidad (reliability block diagram, o RBD) es un método para diagramar e identificar como la confiabilidad de componentes (o subsistemas) <em>R(t)</em>, contribuyen para el éxito o fracaso de una redundancia. Es decir, es un método que puede ser utilizado para diseñar y optimizar componentes y seleccionar redundancias, visando bajar los failure rates.</p>
+</blockquote>
+<p>Un RBD es representado en una serie de blocos conectados (en série, en paralelo, o su combinación), indicando componentes redundantes, indicando el tipo de redundancia y su respectivo failure rate.</p>
+<p>Al analizarse el diagrama, se indican componentes que fallaron y los que no fallaron. Si es posible encontrar una ruta o camino entre el inicio y el fin de proceso con componentes que no fallaron, se puede suponer que el proceso se puede completar.</p>
+<p>Cada RBD debe incluir afirmaciones o sentencias listando todas las relaciones entre los componentes, es decir que condiciones llevarón a tomar un componente u otro en la ejecución del proceso.</p>
+<p>Links:</p>
+<ul>
+<li><a href="https://moodle.univ-angers.fr/pluginfile.php/2071725/mod_resource/content/1/Reliability%20Engineering%20-%20ISMP%20-%20Chap%203%20-%20RBD.pdf">Université Angers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reliability_block_diagram">Wikipedia</a></li>
+<li><a href="https://hpreliability.com/understanding-reliability-block-diagrams/">HPReliability</a></li>
+<li><a href="https://www.sydneywater.com.au/web/groups/publicwebcontent/documents/document/zgrf/mdq2/%7Eedisp/dd_046415.pdf">Sydney Water</a></li>
+</ul>
+<h2 id="failure-reporting-analysis-and-corrective-action-system-fracas"><a class="header" href="#failure-reporting-analysis-and-corrective-action-system-fracas">Failure Reporting, Analysis, and Corrective Action System (FRACAS)</a></h2>
+<blockquote>
+<p>FRACAS es un sistema o proceso definido para el reporte, clasificación y análisis de fallos, bien como la planeación de acciones correctivas de dichos fallos. Es parte del proceso guardar el historial de los análisis y acciones tomadas.</p>
+</blockquote>
+<p>Llevar a cabo dicho proceso supone automatizar el análisis de los logs de los procesos de data (logs), commits, pull requests y tickets.</p>
+<p>La implementación de proceso es cíclica y se da por (FRACAS Kaizen Loop adaptado):</p>
+<ul>
+<li><strong>Failure Mode Analysis</strong>: analysis de los modos de fallos.</li>
+<li><strong>Failure Codes Creation</strong>: creación de códigos de fallos, o la metodología para clasificarlos.</li>
+<li><strong>Work Order History Analysis</strong>: análisis del historial de tickets enviados al equipo de data.</li>
+<li><strong>Root Cause Analysis</strong>: análisis de las causas raíces.</li>
+<li><strong>Strategy Adjustment</strong>: ajuste de estratégia.</li>
+</ul>
+<p>Links:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Failure_reporting,_analysis,_and_corrective_action_system">Wikipedia</a></li>
+<li><a href="https://reliabilityweb.com/articles/entry/whats_the_fracas">Reliability Web</a></li>
+<li><a href="https://ieeexplore.ieee.org/abstract/document/1285523">IEEE Best Practices</a></li>
+</ul>
+<h2 id="spare-parts-stocking-strategy"><a class="header" href="#spare-parts-stocking-strategy">Spare Parts Stocking Strategy</a></h2>
+<blockquote>
+<p>Con suerte siempre existirán disponibles fuentes de datos limpias, con complejas transformaciones y limpiezas, que ahorran tiempo y procesamiento, y que pueden ser usadas en multiples etapas de multiples procesos, sin embargo las mismas pueden temporalmente estar no disponibles o fallar. Una vez identificados tales fuentes, y constatado que son críticas a un sistema o proceso, es prudente tener tareas mínimas de limpieza y transformaciones que trabajen sobre los datos crudos o fuentes de la fuente, que quizas no resultará en datos finales con los mismos niveles de detalles, pero que serán lo suficiente buenos.</p>
+</blockquote>
+<p>Tales tareas no son diseñadas para hacer parte del flujo normal de los procesos, pero son &quot;piezas de recambio&quot;, disponibles para cuando los tiempos de mantenimiento son demasiado largos. El empleo de dichas tareas deben ser por el mínimo de tiempo posible, mientras el equipo tiene tiempo de resolver los fallos en la tarea original, o diseñar su reemplazo.</p>
+<p>Links:</p>
+<ul>
+<li><a href="https://reliabilityweb.com/articles/entry/how_to_develop_a_spare_parts_stocking_strategy">ReliabilityWeb</a></li>
+</ul>
+<h2 id="availability-controls"><a class="header" href="#availability-controls">Availability Controls</a></h2>
+<blockquote>
+<p>Fallos de disponibilidad pueden ocurrir por un sin numero de razones (desde hardware hasta bugs), y algunos sistemas o procesos tienen suficiente relevancia para que controles de disponibilidad (availability controls) sean implementados, para asegurar que determinados servicios o data sigan disponibles cuando ocurra dichos fallos.</p>
+</blockquote>
+<p>Los controles de disponibilidad van desde el uso de backups periódicos de la data, snaps, timetravel, procesos redundantes, sistemas de respaldo en servidores locales o cloud, etc.</p>
+<p>Links:</p>
+<ul>
+<li><a href="https://www.whitehatsec.com/glossary/content/availability-controls">WhiteHatSec</a></li>
+<li><a href="https://www.lawinsider.com/clause/availability-control">Law Insider</a></li>
+<li><a href="https://www.controlglobal.com/assets/14WPpdf/140324-ISA-ControlSystemsHighAvailability.pdf">Control Global</a></li>
+</ul>
+<h2 id="acciones-correctivas"><a class="header" href="#acciones-correctivas">Acciones Correctivas</a></h2>
+<blockquote>
+<p>Parte del CAPA (Corrective Action and Preventive Action Process), las acciones correctivas (CAP - Corrective Action Process) consisten en la detección de fallos, la determinación de sus causas raíces, las acciones de corrección, y la toma de medidas de prevención para que el mismo fallo vuelva a ocurrir por los mismos motivos. La definición completa se encuentra en la ISO 9001.</p>
+</blockquote>
+<p>Diversas herramientas y técnicas son utilizadas en diversas industrias para su aplicación, dentre ellas, PDCA (Plan, Do, Check, Act), DMAIC (Define. Measure, Analyse, Improve, Control), 8D, etc. De manera general cualquier herramienta, técnica o metodologia, es sumarizada en la ISO 9001, en siete &quot;pasos&quot;:</p>
+<ol>
+<li>Definir el problema. Consiste en definir que el problema sea real, identificar Quien, Qué, Cuando, Dónde y Por qué. En el mundo de la ingeniería de datos, ese paso debe ser, en lo posíble, automático, y el fallo debe ser detectado desde sensores.</li>
+<li>Definir el escopo. Consiste en mensurar el problema a se resolver, conociendo su frecuencia, a que procesos o tareas, y stakeholders afecta. Para los procesos de data, muchos de los detalles de escopo ya deberían ser información conocida, desde el diseño de los procesos y tareas, ya la frecuencia puede ser levantada desde los procesos de observability y FRACAS.</li>
+<li>Acciones de confinamiento o contención. Son medidas puntuales y adoptadas por el mínimo de tiempo posible, mientras se trabaja en la solución definitiva del fallo. De antemano, tales medidas ya deberían estar diseñadas, para cada tarea o sub-tarea. La selección de medidas debería estar automatizada, de no serlo, se deben implementar de inmediato.</li>
+<li>Identificación de causas raíz. Diagnosis clara, precisa y completa del fallo. Su documentación hace parte del FRACAS.</li>
+<li>Planeación de acciones correctivas. Consiste en la planeación de acciones de corrección basadas especificamente en la causa raíz.</li>
+<li>Implementación de acciones correctivas. Consiste en la implementación final de las acciones correctivas en el proceso, que deben automaticamente estar disponibles cuando fallos similares se presenten.</li>
+<li>Acompañamento de los resultados (Follow up). Documentación, comunicación, FRACAS completos.</li>
+</ol>
+<h2 id="antifragilidad"><a class="header" href="#antifragilidad">Antifragilidad</a></h2>
+<blockquote>
+<p>Inspirado en el libro <em>Antifragile: Things That Gain from Disorder</em> de Nissim Nicholas Taleb, la antifragilidad difere de los conceptos de resiliencia o robustez, dónde los sistemas buscan mantener su nivel de confiabilidad, sino que desde su diseño, los sistemas aumentar su confiabilidad con respecto a los inputs del sistema.</p>
+</blockquote>
+<p>La antifragilidad propone un cambio de diseño de los sistemas (en el escopo de este libro, procesos), los cuales comumente son diseñados para ser frágiles, en el sentido de que si el mismo opera fuera de sus requerimientos, lo mismo fallará. La antifragilidad propone lo contrário, diseñar sistemas que se vuelven mejores cuando expuestos a cargas fuera de los requerimientos. En ese sentido, los sistemas no son diseñados para responder solamente a lo esperado o anticipado, sino que interactúan con su entorno en tiempo real y se adaptan a ello.</p>
+<ul>
+<li>Self-healing</li>
+<li>Real time sensoring, monitoring</li>
+<li>Live FRACAS</li>
+<li>System Health Management</li>
+<li>Automatic Repair</li>
+</ul>
+<p>Links:</p>
+<ul>
+<li><a href="https://ntrs.nasa.gov/api/citations/20140010075/downloads/20140010075.pdf">NASA</a></li>
+<li><a href="https://refuses.github.io/preprints/antifragile.pdf">Refuses</a></li>
+</ul>
+<h2 id="bulkhead-pattern"><a class="header" href="#bulkhead-pattern">Bulkhead Pattern</a></h2>
+<blockquote>
+<p>En el mundo náutico encontramos los mamparos, placas de madera que encontramos en los barcos, que buscan que el barco no naufrague cuando se tiene comprometida una porción del casco. Para los sistemas el Bulkhead Pattern adapta exactamente esa idea, de que un fallo en una porción del sistema no comprometa el sistema en su totalidad.</p>
+</blockquote>
+<p>Este design pattern es aplicado comumente en el desarrollo de software, consiste en no sobrecargar un servicio con más llamadas de las que puede soportar en un determinado tiempo, un ejemplo de eso es Hystrix, de Netflix.</p>
+<p>Links:</p>
+<ul>
+<li><a href="https://github.com/Netflix/Hystrix/wiki/How-it-Works">Netflix</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../concepts/fault_prediction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../concepts/data_quality.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../concepts/fault_prediction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../concepts/data_quality.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
