@@ -2,7 +2,7 @@
 
 [Cover](./COVER.md)
 [Título](./TITLE.md)
-[Sumário](./SUMMARY.md)
+[Índice](./SUMMARY.md)
 [Dedicatória](./DEDICATION.md)
 [Introducción](./FOREWORD.md)
 [Prefacio](./PREFACE.md)
@@ -10,10 +10,10 @@
 [Objetivos](./OBJECTIVES.md)
 [Estructura y Contenido](./STRUCTURE.md)
 
-- [Conceptos](./concepts/concepts.md)
+- [Conceptos](./CONCEPTS.md)
   - [Introducción a Sistemas](./concepts/systems_info.md)
   - [Confiabilidad de Sistemas](./concepts/systems_reliability.md)
-    - [Impedimientos: Fallos, Errores y Defectos](./concepts/impediments.md)
+    - [Impedimentos: Fallos, Errores y Defectos](./concepts/impediments.md)
     - [Deficiencias](./concepts/deficiencies.md)
     - [Atributos](./concepts/attributes.md)
     - [Mecanismos](./concepts/mechanisms.md)
@@ -27,7 +27,8 @@
     - [Datos Maestros](./concepts/master_data.md)
     - [Calidad de los Procesos de Datos](./concepts/data_management_processes.md)
     - [Modelos de Calidad de Datos](./concepts/data_quality_models.md)
-  - [Orquestación, DAGs y Pipelines]()
+  - [Confiabilidad de Datos]()
+  - [Procesos]()
 - [Casos de Uso]()
 
 [Epílogo](./EPILOGUE.md)
