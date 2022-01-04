@@ -7,7 +7,7 @@ Los sistemas están compuestos de **componentes**, cada uno de los cuales se pue
 
 Un componente defectuoso de un sistema es un componente que producirá un error bajo un conjunto concreto de circunstancias durante la vida del sistema. Visto en términos de transición de estados, *un sistema puede ser considerado como un número de estados externos e internos*. 
 
-Un estado externo no especificado en el comportamiento del sistema se considerará un fallo del sistema. El sistema en sí mismo consta de un número de componentes (cada uno con sus propios estados), contribuyendo todos ellos al comportamiento externo del sistema. La combinación de los estados de estos componentes se denomina estado interno del sistema. Un estado interno no especificado se considera un error, y el componente que produjo la transición de estados ilegal se dice que es defectuoso.
+Un estado externo no especificado en el comportamiento del sistema se considerará un fallo del sistema. El sistema en sí mismo consta de un número de componentes (cada uno con sus propios estados), contribuyendo todos ellos al comportamiento externo del sistema. La combinación de los estados de estos componentes se denomina estado interno del sistema. *Un estado interno no especificado se considera un error, y el componente que produjo la transición de estados ilegal se dice que es defectuoso*.
 
 Definiré tres tipos de fallos:
 * **Fallos transitorios**: comienza en un instante de tiempo concreto, se mantiene en el sistema durante algún periodo de tiempo, y luego desaparece.
