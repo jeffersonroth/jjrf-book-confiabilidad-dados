@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -34,6 +34,8 @@ jobs:
         cd book
         /tmp/deploy
   deploy:
+    name: deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

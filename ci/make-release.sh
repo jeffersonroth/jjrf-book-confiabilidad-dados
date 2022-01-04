@@ -16,7 +16,7 @@ cargo install mdbook
 mdbook init --title="Ingenieria y Confiabilidad de Datos"
 mdbook build
 cd book
-asset="mdbook-$TAG-$host.tar.gz"
+asset="mdbook.tar.gz"
 tar czf ../../$asset *
 cd ../..
 
