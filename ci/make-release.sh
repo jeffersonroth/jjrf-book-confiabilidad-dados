@@ -16,13 +16,3 @@ cargo install mdbook
 mdbook init --title="Ingenieria y Confiabilidad de Datos"
 mdbook build
 cd book
-asset="mdbook.tar.gz"
-tar czf ../../$asset *
-cd ../..
-
-if [[ -z "$GITHUB_TOKEN" ]]
-then
-  echo "$GITHUB_TOKEN not set, skipping deploy."
-else
-  hub release edit -m "" --attach $asset $TAG
-fi
