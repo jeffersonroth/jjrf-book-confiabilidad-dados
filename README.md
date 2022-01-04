@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/jeffersonroth/jjrf-book-confiabilidad-dados">
+  <a href="https://github.com/jeffersonroth/jjrf-book-confiabilidad-datos">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -11,7 +11,7 @@
     Libro sobre ingeniería, calidad y confiabilidad de datos
     <br />
     <br />
-    <a href="https://github.com/jeffersonroth/jjrf-book-confiabilidad-dados">Preview</a>
+    <a href="https://github.com/jeffersonroth/jjrf-book-confiabilidad-datos">Preview</a>
   </p>
 </p>
 
@@ -57,7 +57,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/jeffersonroth/jjrf-book-confiabilidad-dados.git
+   git clone https://github.com/jeffersonroth/jjrf-book-confiabilidad-datos.git
    ```
 2. Install cargo packages
    ```sh
@@ -80,4 +80,4 @@ Copyright (C) 2021 Jeff Roth. See `LICENSE` for more information.
 
 Jefferson Roth - jjrothfilho@gmail.com
 
-Project Link: [https://github.com/jeffersonroth/jjrf-book-confiabilidad-dados](https://github.com/jeffersonroth/jjrf-book-confiabilidad-dados)
+Project Link: [https://github.com/jeffersonroth/jjrf-book-confiabilidad-datos](https://github.com/jeffersonroth/jjrf-book-confiabilidad-datos)
