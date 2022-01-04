@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Builds the release and creates an archive and optionally deploys to GitHub.
+# Builds the book
 set -ex
 
 if [[ -z "$GITHUB_REF" ]]

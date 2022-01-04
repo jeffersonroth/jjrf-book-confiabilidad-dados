@@ -23,16 +23,8 @@ jobs:
     - name: Build and Deploy Artifacts
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: ci/make-release.sh
+      run: ci/build-mdbook.sh
       shell: bash
-    - name: Deploy to GitHub
-      env:
-        GITHUB_DEPLOY_KEY: ${{ secrets.GITHUB_DEPLOY_KEY }}
-      run: |
-        touch book/.nojekyll
-        curl -LsSf https://raw.githubusercontent.com/rust-lang/simpleinfra/master/setup-deploy-keys/src/deploy.rs | rustc - -o /tmp/deploy
-        cd book
-        /tmp/deploy
   deploy:
     name: deploy
     needs: build
