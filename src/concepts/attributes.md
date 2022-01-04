@@ -1,6 +1,4 @@
 # Atributos
-> El modo y las medidas mediante las cuales se puede **estimar la calidad de un servicio confiable**.
-
 ## Confiabilidad
 > Es la probabilidad *R(t)* de que el sistema **siga funcionando al final del proceso**. El tiempo *t* se mide en horas continuas de trabajo entre diagnósticos. La tasa constante de fallos &lambda; se mide en *fallos/h*. La vida útil de un componente del sistema es la región constante (escala logarítmica) de la curva entre vida del componente (Component Age) y su tasa de fallos (Failure Rate). La región de la gráfica antes del equilibrio es el Burn In Phase, y la región en donde la tasa de fallos empieza a crecer es el End of Life Phase. Así tenemos *R(t)=exp(-&lambda;t)*.
 
@@ -15,7 +13,7 @@ Es una medida (probabilidad) del **éxito con el que el sistema se ajusta a la e
 ## Seguridad
 > Es la ausencia de condiciones que pueden causar daños y propagación de **daños catastróficos** en producción.
 
-Sin embargo, como esa definición puede clasificar cómo inseguros los principales procesos de Finanzas y Growth, por ejemplo, consideraremos a menudo el término **percance**.
+Sin embargo, como esa definición puede clasificar cómo inseguros virtualmente cualquier proceso, consideraremos a menudo el término **percance**.
 
 > Un percance es un **evento no planeado** o secuencia de eventos que pueden producir daños catastróficos.
 

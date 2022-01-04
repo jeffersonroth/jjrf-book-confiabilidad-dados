@@ -1,6 +1,4 @@
 # Mecanismos
-Mecanismos de Quality Assurance.
-
 ## [Prevención de Fallos : Evitación](./fault_prevention_avoidance.md)
 
 ## [Tolerancia de Fallos](./fault_tolerance.md)
