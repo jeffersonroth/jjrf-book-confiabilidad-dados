@@ -15,9 +15,9 @@ export CARGO_PROFILE_RELEASE_LTO=true
 cargo install mdbook
 mdbook init --title="Ingenieria y Confiabilidad de Datos"
 mdbook build
-cd target/release
+cd book
 asset="mdbook-$TAG-$host.tar.gz"
-tar czf ../../$asset mdbook
+tar czf ../../$asset *
 cd ../..
 
 if [[ -z "$GITHUB_TOKEN" ]]

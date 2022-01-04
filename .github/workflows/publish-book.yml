@@ -25,15 +25,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: ci/make-release.sh
       shell: bash
-  pages:
-    name: GitHub Pages
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Install Rust (rustup)
-      run: rustup update stable --no-self-update && rustup default stable
-    - name: Build Book
-      run: cargo run -- build book
     - name: Deploy to GitHub
       env:
         GITHUB_DEPLOY_KEY: ${{ secrets.GITHUB_DEPLOY_KEY }}
@@ -46,14 +37,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: 'latest'
-
       - run: mdbook build
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
