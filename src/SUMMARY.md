@@ -11,10 +11,9 @@
 [Estructura y Contenido](./STRUCTURE.md)
 
 - [Conceptos](./CONCEPTS.md)
-  - [Introducción a Sistemas](./concepts/systems_info.md)
+  - [Introducción a Sistemas](./concepts/systems_intro.md)
   - [Confiabilidad de Sistemas](./concepts/systems_reliability.md)
     - [Impedimentos: Fallos, Errores y Defectos](./concepts/impediments.md)
-    - [Deficiencias](./concepts/deficiencies.md)
     - [Atributos](./concepts/attributes.md)
     - [Mecanismos](./concepts/mechanisms.md)
       - [Prevención de Fallos: Evitación](./concepts/fault_prevention_avoidance.md)
@@ -27,8 +26,9 @@
     - [Datos Maestros](./concepts/master_data.md)
     - [Calidad de los Procesos de Datos](./concepts/data_management_processes.md)
     - [Modelos de Calidad de Datos](./concepts/data_quality_models.md)
-  - [Confiabilidad de Datos]()
+  - [Confiabilidad de Datos](./concepts/data_relibility.md)
   - [Procesos]()
+  - [Operaciones]()
 - [Casos de Uso]()
 
 [Epílogo](./EPILOGUE.md)

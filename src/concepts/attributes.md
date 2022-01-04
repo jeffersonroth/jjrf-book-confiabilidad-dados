@@ -29,3 +29,6 @@ Por mayores que sean su similitud con la definición de **fiabilidad**, se debe 
 
 ## Escalabilidad
 > Capacidad de adecuación al negocio.
+
+## Deficiencias
+> Circunstancias que causan o son producto de la no **confiabilidad**.
