@@ -1,7 +1,6 @@
 [book]
-title = "Ingenieria y Confiabilidad de Datos"
+title = "Ingeniería y Confiabilidad de Datos"
 authors = ["Jefferson Roth"]
-
-[output.html]
-
-[output.linkcheck]  # enable the "mdbook-linkcheck" renderer
+language = "es"
+multilingual = false
+src = "src"

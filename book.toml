@@ -1,5 +1,6 @@
 [book]
-authors = []
-language = "en"
+title = "Ingeniería y Confiabilidad de Datos"
+authors = ["Jefferson Roth"]
+language = "es"
 multilingual = false
 src = "src"
