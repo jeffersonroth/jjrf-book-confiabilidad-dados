@@ -12,7 +12,9 @@ TAG=${GITHUB_REF#*/tags/}
 
 host=$(rustc -Vv | grep ^host: | sed -e "s/host: //g")
 export CARGO_PROFILE_RELEASE_LTO=true
-cargo build --bin mdbook --release
+cargo install mdbook
+mdbook init --title="Ingenieria y Confiabilidad de Datos"
+mdbook build
 cd target/release
 asset="mdbook-$TAG-$host.tar.gz"
 tar czf ../../$asset mdbook
